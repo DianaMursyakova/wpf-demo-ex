@@ -35,7 +35,7 @@ namespace TravelAgency
             new TourItem(),
             new TourItem()
         };
-            
+
             foreach (var tour in tourItems)
             {
                 ToursPanel.Children.Add(tour);

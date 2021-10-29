@@ -4,25 +4,33 @@
              xmlns:local="clr-namespace:TravelAgency"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="Label">
+        <Style x:Key="CommonStyle" TargetType="Control">
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontFamily" Value="Comic Sans MC"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
-        <Style TargetType="TextBox">
-            <Setter Property="FontFamily" Value="Comic Sans MC"/>
+
+        <Style TargetType="Label" BasedOn="{StaticResource CommonStyle}">
+            
+        </Style>
+
+        <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Width" Value="200px"/>
             <Setter Property="Margin" Value="3px"/>
         </Style>
-        
-        <Style TargetType="ComboBox">
-            <Setter Property="FontFamily" Value="Comic Sans MC"/>
+
+        <Style TargetType="ComboBox" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Width" Value="200px"/>
+            <Setter Property="MaxHeight" Value="24"/>
             <Setter Property="Margin" Value="3px"/>
         </Style>
-        
+
         <Style TargetType="Grid">
             <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style TargetType="MenuItem" BasedOn="{StaticResource CommonStyle}">
+            <Setter Property="Height" Value="24"/>
         </Style>
     </Application.Resources>
 </Application>

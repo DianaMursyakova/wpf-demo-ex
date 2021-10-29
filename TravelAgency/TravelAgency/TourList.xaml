@@ -50,7 +50,7 @@
         </Grid>
 
         <ScrollViewer Grid.Row="1" >
-            <WrapPanel x:Name="ToursPanel" Margin="5"  >
+            <WrapPanel x:Name="ToursPanel" Margin="5" HorizontalAlignment="Center"  >
             </WrapPanel>
         </ScrollViewer>
     </Grid>

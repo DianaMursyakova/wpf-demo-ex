@@ -20,10 +20,14 @@ namespace TravelAgency
     /// </summary>
     public partial class MainWindow : Window
     {
+        Page currentPage;
+        Page prevPage;
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new TourList());
+            var page = new TourList();
+            currentPage = page;
+            MainFrame.Navigate(currentPage);
         }
     }
 }
