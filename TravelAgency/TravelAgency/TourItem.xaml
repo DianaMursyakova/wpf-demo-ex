@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TravelAgency"
              mc:Ignorable="d" Height="200" Width="230">
+    <Button HorizontalContentAlignment="Stretch">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="52*"/>
@@ -53,4 +54,5 @@
             </Viewbox>
         </Grid>
     </Grid>
+    </Button>
 </UserControl>

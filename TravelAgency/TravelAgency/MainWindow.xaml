@@ -11,12 +11,12 @@
             <RowDefinition Height="24"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0">
-            <MenuItem Header="Список туров" />
-            <MenuItem Header="test"/>
-            <MenuItem Header="test"/>
+        <Menu Grid.Row="0" Focusable="False">
+            <MenuItem Header="Список туров" TabIndex="0" />
+            <MenuItem Header="test" TabIndex="1"/>
+            <MenuItem Header="test" TabIndex="2"/>
         </Menu>
         <Frame Grid.Row="1"
-               Name="MainFrame"/>
+               Name="MainFrame" Focusable="False"/>
     </Grid>
 </Window>
