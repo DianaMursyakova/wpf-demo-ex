@@ -14,17 +14,33 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="24"/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="1">
+        <DataGrid x:Name="HotelsDataGrid" 
+                  Grid.Row="1"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False"
+                  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Width="4*"/>
-                <DataGridTextColumn Header="Количество звезд" Width="2*"/>
-                <DataGridTextColumn Header="Страна" Width="4*"/>
-                <DataGridTextColumn Header="Количество туров" Width="2*"/>
-                <DataGridTextColumn Width="1*"/>
-               
+                <DataGridTextColumn Header="Название" 
+                                    Binding="{Binding Title}"  
+                                    Width="4*"/>
+                <DataGridTextColumn Header="Количество звезд" 
+                                    Binding="{Binding Stars}" 
+                                    Width="2*"/>
+                <DataGridTextColumn Header="Страна" 
+                                    Binding="{Binding Country}"
+                                    Width="4*"/>
+                <DataGridTextColumn Header="Количество туров" 
+                                    Binding="{Binding ToursCount}"
+                                    Width="2*"/>
+                <DataGridTemplateColumn  Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="Button_Edit" Content="✎"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
-            <Button/>
-
+            
         </DataGrid>
         
     </Grid>
