@@ -5,16 +5,18 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style x:Key="CommonStyle" TargetType="Control">
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Comic Sans MC"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Margin" Value="5px"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
         <Style x:Key="CyanBackground" TargetType="Grid">
             <Setter Property="Background" Value="#bae3e8"/>
         </Style>
-        
+
         <Style x:Key="BlueBackground" TargetType="Grid">
             <Setter Property="Background" Value="#445c93"/>
         </Style>
@@ -27,18 +29,14 @@
             <Setter Property="Foreground" Value="#000000"/>
         </Style>
 
-        
-
         <Style x:Key="WhiteText" TargetType="Control" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Foreground" Value="#ffffff"/>
             <Setter Property="Background" Value="{x:Null}"/>
         </Style>
 
         <Style TargetType="Button" x:Key="CommonButton" BasedOn="{StaticResource CommonStyle}">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Padding" Value="2"/>
             <Setter Property="Background" Value="White"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="20,1"/>
         </Style>
 
         <Style TargetType="Button" x:Key="RedButton" BasedOn="{StaticResource CommonButton}">
@@ -48,33 +46,34 @@
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
+        <Style TargetType="Button" x:Key="MenuButton" BasedOn="{StaticResource CommonStyle}">
+            <Setter Property="Height" Value="24"/>
+            <Setter Property="Background" Value="#fac716"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="BorderBrush" Value=" #000000"/>
+        </Style>
+
         <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Width" Value="200px"/>
-            <Setter Property="Margin" Value="5px"/>
+            
         </Style>
 
         <Style TargetType="ComboBox" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Width" Value="200px"/>
             <Setter Property="MaxHeight" Value="24"/>
-            <Setter Property="Margin" Value="3px"/>
         </Style>
 
         <Style TargetType="Grid">
             <Setter Property="Background" Value="White"/>
         </Style>
 
-
-        <Style TargetType="Menu">
-            <Setter Property="Background" Value=" #fac716"/>
-        </Style>
-        
         <Style TargetType="MenuItem" BasedOn="{StaticResource CommonStyle}">
-            
             <Setter Property="Height" Value="24"/>
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style>
-        
-        
+
+
+
     </Application.Resources>
 </Application>

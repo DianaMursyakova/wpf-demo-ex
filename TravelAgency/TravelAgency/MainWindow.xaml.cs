@@ -30,6 +30,9 @@ namespace TravelAgency
 
         private void ChangePage(Page page)
         {
+            if (page == currentPage)
+                return;
+            
             prevPage = currentPage;
             currentPage = page;
             MainFrame.Navigate(currentPage);

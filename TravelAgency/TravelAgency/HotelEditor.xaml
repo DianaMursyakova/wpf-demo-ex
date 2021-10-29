@@ -8,10 +8,12 @@
         Title="Добавление/редактирование отеля" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="327*"/>
+            <RowDefinition Height="52*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Button x:Name="Button_back" Content="Назад" Style="{StaticResource MenuButton}" HorizontalAlignment="Left" Width="100" Click="Button_back_Click"/>
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -44,7 +46,7 @@
                      />
             <ComboBox Grid.Column="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="Auto" Grid.Row="3"/>
         </Grid>
-        <Grid Style="{StaticResource CyanBackground}" Grid.Row="1">
+        <Grid Style="{StaticResource CyanBackground}" Grid.Row="2">
             <Button x:Name="Button_confirm" Content="Подтвердить" Style="{StaticResource RedButton}" Height="50" Click="Button_confirm_Click"/>
         </Grid>
     </Grid>

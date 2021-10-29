@@ -38,6 +38,9 @@ namespace TravelAgency
 
 
             _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
+            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
+            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
+            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
 
             ComboBox_ElementsShowCount.SelectedIndex = 0;
         }

@@ -11,7 +11,7 @@
     <Grid Grid.Row="1">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <DataGrid Name="HotelsDataGrid" 
                   Grid.Row="0"
@@ -51,7 +51,7 @@
             <Grid.Resources>
                 <Style TargetType="Button" BasedOn="{StaticResource CommonButton}">
                     <Setter Property="FontSize" Value="14"/>
-                    <Setter Property="Margin" Value="5,0"/>
+                    <Setter Property="Padding" Value="0"/>
                     <Setter Property="VerticalAlignment" Value="Stretch"/>
                     <Setter Property="BorderBrush" Value="{x:Null}"/>
                 </Style>

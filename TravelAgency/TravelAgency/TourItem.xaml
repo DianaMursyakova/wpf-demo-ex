@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TravelAgency"
-             mc:Ignorable="d" Height="200" Width="230">
+             mc:Ignorable="d" Height="250" Width="250">
 
-    <Button Style="{StaticResource CommonButton}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Button Background="White" HorizontalContentAlignment="Stretch">
 
         <Grid Background="{x:Null}">
             <Grid.RowDefinitions>
@@ -31,9 +31,9 @@
                 <StackPanel Orientation="Horizontal">
                     <Label x:Name="PriceLabel" 
                        Content="10000"
-                       FontWeight="Bold"/>
+                       FontWeight="Bold" />
                     <Label Content="РУБ" 
-                       FontWeight="Bold"/>
+                       FontWeight="Bold" />
                 </StackPanel>
             </Viewbox>
 

@@ -26,6 +26,12 @@ namespace TravelAgency
 
         private void Button_confirm_Click(object sender, RoutedEventArgs e)
         {
+
+            this.Close();
+        }
+
+        private void Button_back_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

@@ -11,8 +11,11 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid Style="{StaticResource GoldBackground}">
-            <Label  Content="Подтверждение удаления отеля"/>
+        <Grid Style="{StaticResource CyanBackground}">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Назад" Style="{StaticResource MenuButton}"/>
+                <Label  Content="Подтверждение удаления отеля"/>
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
