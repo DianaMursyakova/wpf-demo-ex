@@ -47,13 +47,14 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Style="{StaticResource BlueBackground}">
             <Grid.Resources>
-                <Style TargetType="Button" BasedOn="{StaticResource CommonButton}">
+                <Style TargetType="Button" BasedOn="{StaticResource RedButton}">
                     <Setter Property="FontSize" Value="14"/>
-                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Padding" Value="3"/>
                     <Setter Property="VerticalAlignment" Value="Stretch"/>
-                    <Setter Property="BorderBrush" Value="{x:Null}"/>
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="Margin" Value="2"/>
                 </Style>
             </Grid.Resources>
             <Grid.ColumnDefinitions>
@@ -62,7 +63,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0"  Orientation="Horizontal">
-                <Label Content="Количество элементов" FontSize="14"/>
+                <Label Style="{StaticResource WhiteText}" Content="Количество элементов" FontSize="14"/>
                 <ComboBox x:Name="ComboBox_ElementsShowCount" Width="50" FontSize="14">
                     <ComboBoxItem>
                         <TextBlock Text="10"/>
@@ -79,7 +80,7 @@
                 </ComboBox>
                 <Button x:Name="Button_Add" Content="Добавить отель" Click="Button_Add_Click"/>
             </StackPanel>
-            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Width="338" Grid.ColumnSpan="2">
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="2">
 
                 <Button Content="Предыдущая"/>
                 <Button Content="Следующая"/>

@@ -12,7 +12,7 @@
             <RowDefinition Height="327*"/>
             <RowDefinition Height="52*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="Button_back" Content="Назад" Style="{StaticResource MenuButton}" HorizontalAlignment="Left" Width="100" Click="Button_back_Click"/>
+        <Button x:Name="Button_back" Content="Назад" Style="{StaticResource MenuButton}" HorizontalAlignment="Left" Click="Button_back_Click"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>

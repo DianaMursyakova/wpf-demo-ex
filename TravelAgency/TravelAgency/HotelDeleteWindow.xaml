@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelAgency"
         mc:Ignorable="d"
-        Title="Удаление отеля" Height="261" Width="483" ResizeMode="NoResize">
+        Title="Удаление отеля" Height="250" Width="483" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
