@@ -12,8 +12,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Focusable="False">
-            <MenuItem Header="Список туров" TabIndex="0" />
-            <MenuItem Header="test" TabIndex="1"/>
+            <MenuItem x:Name="MenuItem_TourList" Header="Список туров" TabIndex="0" Click="MenuItem_TourList_Click" />
+            <MenuItem x:Name="MenuItem_HotelTabel" Header="Таблица отелей" TabIndex="1" Click="MenuItem_HotelTabel_Click"/>
             <MenuItem Header="test" TabIndex="2"/>
         </Menu>
         <Frame Grid.Row="1"

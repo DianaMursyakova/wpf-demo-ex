@@ -25,9 +25,23 @@ namespace TravelAgency
         public MainWindow()
         {
             InitializeComponent();
-            var page = new TourList();
+
+        }
+
+        private void MenuItem_HotelTabel_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePage(new HotelsTable());
+        }
+        private void ChangePage(Page page)
+        {
+            prevPage = page;
             currentPage = page;
             MainFrame.Navigate(currentPage);
+        }
+
+        private void MenuItem_TourList_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePage(new TourList());
         }
     }
 }

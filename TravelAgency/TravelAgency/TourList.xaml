@@ -21,7 +21,8 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.4*"/>
-                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" 
                    Grid.Column="0"
@@ -47,6 +48,22 @@
                        Content="только актуальные туры"/>
             </StackPanel>
 
+            <Label Grid.Row="1"
+                   Grid.Column="2" 
+                   Content="Сортировка по цене:"
+                   HorizontalAlignment="Left"
+                   />
+
+            <ComboBox Grid.Row="2"
+                      Grid.Column="2"
+                      HorizontalAlignment="Left">
+                <ComboBoxItem>
+                    <TextBlock Text="По возростанию"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="По убыванию"/>
+                </ComboBoxItem>
+            </ComboBox>
         </Grid>
 
         <ScrollViewer Grid.Row="1" >

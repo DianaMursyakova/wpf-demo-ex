@@ -56,12 +56,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HotelItem.xaml.cs">
+      <DependentUpon>HotelItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HotelsTable.xaml.cs">
+      <DependentUpon>HotelsTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TourItem.xaml.cs">
       <DependentUpon>TourItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="TourList.xaml.cs">
       <DependentUpon>TourList.xaml</DependentUpon>
     </Compile>
+    <Page Include="HotelItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HotelsTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
