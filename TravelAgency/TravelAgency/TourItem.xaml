@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TravelAgency"
              mc:Ignorable="d" Height="200" Width="230">
 
-    <Button Style="{StaticResource WhiteButton}">
+    <Button Style="{StaticResource CommonButton}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
         <Grid Background="{x:Null}">
             <Grid.RowDefinitions>

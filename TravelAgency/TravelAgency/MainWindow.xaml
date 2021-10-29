@@ -12,11 +12,20 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Focusable="False">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+
             <MenuItem x:Name="MenuItem_TourList" Header="Список туров" TabIndex="0" Click="MenuItem_TourList_Click" />
             <MenuItem x:Name="MenuItem_HotelTabel" Header="Таблица отелей" TabIndex="1" Click="MenuItem_HotelTabel_Click"/>
             <MenuItem Header="test" TabIndex="2"/>
+            <MenuItem x:Name="Button_Back" Header="Назад" HorizontalAlignment="Right" Click="Button_Back_Click"/>
         </Menu>
         <Frame Grid.Row="1"
-               Name="MainFrame" Focusable="False"/>
+               Name="MainFrame" 
+               Focusable="False"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

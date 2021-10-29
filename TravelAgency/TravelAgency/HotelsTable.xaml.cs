@@ -33,10 +33,13 @@ namespace TravelAgency
         public HotelsTable()
         {
             InitializeComponent();
+            HotelsDataGrid.AutoGenerateColumns = false;
             HotelsDataGrid.ItemsSource = _hotels;
 
 
             _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
+
+            ComboBox_ElementsShowCount.SelectedIndex = 0;
         }
     }
 }
