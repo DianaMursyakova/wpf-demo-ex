@@ -11,20 +11,46 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
-        <Style TargetType="Label" BasedOn="{StaticResource CommonStyle}">
-            
+        <Style x:Key="CyanBackground" TargetType="Grid">
+            <Setter Property="Background" Value="#bae3e8"/>
         </Style>
         
+        <Style x:Key="BlueBackground" TargetType="Grid">
+            <Setter Property="Background" Value="#445c93"/>
+        </Style>
+
+        <Style x:Key="GoldBackground" TargetType="Grid">
+            <Setter Property="Background" Value="#fac716"/>
+        </Style>
+
+        <Style TargetType="Label" BasedOn="{StaticResource CommonStyle}">
+            <Setter Property="Foreground" Value="#000000"/>
+        </Style>
+
+        
+
+        <Style x:Key="WhiteText" TargetType="Control" BasedOn="{StaticResource CommonStyle}">
+            <Setter Property="Foreground" Value="#ffffff"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+
         <Style TargetType="Button" x:Key="CommonButton" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="2"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         </Style>
-        
+
+        <Style TargetType="Button" x:Key="RedButton" BasedOn="{StaticResource CommonButton}">
+            <Setter Property="Background" Value="#e31e24"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
         <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Width" Value="200px"/>
-            <Setter Property="Margin" Value="3px"/>
+            <Setter Property="Margin" Value="5px"/>
         </Style>
 
         <Style TargetType="ComboBox" BasedOn="{StaticResource CommonStyle}">
@@ -37,8 +63,16 @@
             <Setter Property="Background" Value="White"/>
         </Style>
 
+
+        <Style TargetType="Menu">
+            <Setter Property="Background" Value=" #fac716"/>
+        </Style>
+        
         <Style TargetType="MenuItem" BasedOn="{StaticResource CommonStyle}">
+            
             <Setter Property="Height" Value="24"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="Black"/>
         </Style>
         
         

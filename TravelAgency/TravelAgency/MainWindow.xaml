@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:TravelAgency"
         mc:Ignorable="d"
         Title="Путешествуй по России" Height="450" Width="800" Icon="Resources/logo_full_color.png" MinWidth="700" MinHeight="400">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="24"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Focusable="False">
+        <Menu x:Name="MainMenu" Grid.Row="0" 
+              Focusable="False" >
             <Menu.ItemsPanel>
                 <ItemsPanelTemplate>
                     <DockPanel HorizontalAlignment="Stretch"/>
@@ -20,7 +21,6 @@
 
             <MenuItem x:Name="MenuItem_TourList" Header="Список туров" TabIndex="0" Click="MenuItem_TourList_Click" />
             <MenuItem x:Name="MenuItem_HotelTabel" Header="Таблица отелей" TabIndex="1" Click="MenuItem_HotelTabel_Click"/>
-            <MenuItem Header="test" TabIndex="2"/>
             <MenuItem x:Name="Button_Back" Header="Назад" HorizontalAlignment="Right" Click="Button_Back_Click"/>
         </Menu>
         <Frame Grid.Row="1"

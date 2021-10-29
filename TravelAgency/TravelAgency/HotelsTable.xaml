@@ -33,12 +33,19 @@
                 <DataGridTemplateColumn  Width="1*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button x:Name="Button_Edit" Content="✎"></Button>
+                            <Button x:Name="Button_Edit" Content="✎" Click="Button_Edit_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="Button_Delete" Content="✖" Click="Button_Delete_Click"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-            
+
         </DataGrid>
         <Grid Grid.Row="2">
             <Grid.Resources>
@@ -50,12 +57,12 @@
                 </Style>
             </Grid.Resources>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="67*"/>
             </Grid.ColumnDefinitions>
-            
+
             <StackPanel Grid.Column="0"  Orientation="Horizontal">
-                <Label Content="Количество элементов на странице" FontSize="14"/>
+                <Label Content="Количество элементов" FontSize="14"/>
                 <ComboBox x:Name="ComboBox_ElementsShowCount" Width="50" FontSize="14">
                     <ComboBoxItem>
                         <TextBlock Text="10"/>
@@ -70,9 +77,10 @@
                         <TextBlock Text="50"/>
                     </ComboBoxItem>
                 </ComboBox>
+                <Button x:Name="Button_Add" Content="Добавить отель" Click="Button_Add_Click"/>
             </StackPanel>
-            <StackPanel Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Right">
-                
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Width="338" Grid.ColumnSpan="2">
+
                 <Button Content="Предыдущая"/>
                 <Button Content="Следующая"/>
                 <Button Content="Первая"/>

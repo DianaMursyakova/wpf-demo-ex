@@ -32,7 +32,6 @@ namespace TravelAgency
         {
             prevPage = currentPage;
             currentPage = page;
-            this.Title = page?.Title;
             MainFrame.Navigate(currentPage);
         }
         private void MenuItem_HotelTabel_Click(object sender, RoutedEventArgs e)

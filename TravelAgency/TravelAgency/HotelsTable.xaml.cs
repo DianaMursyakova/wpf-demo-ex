@@ -41,5 +41,23 @@ namespace TravelAgency
 
             ComboBox_ElementsShowCount.SelectedIndex = 0;
         }
+
+        private void Button_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            var deleteWindow = new HotelDeleteWindow();
+            deleteWindow.Show();
+        }
+
+        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new HotelEditor();
+            window.Show();
+        }
+
+        private void Button_Edit_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new HotelEditor();
+            window.Show();
+        }
     }
 }
