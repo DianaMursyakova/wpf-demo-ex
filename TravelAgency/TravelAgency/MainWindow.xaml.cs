@@ -23,6 +23,7 @@ namespace TravelAgency
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new TourList());
         }
     }
 }

@@ -4,6 +4,25 @@
              xmlns:local="clr-namespace:TravelAgency"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Comic Sans MC"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Comic Sans MC"/>
+            <Setter Property="Width" Value="200px"/>
+            <Setter Property="Margin" Value="3px"/>
+        </Style>
+        
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Comic Sans MC"/>
+            <Setter Property="Width" Value="200px"/>
+            <Setter Property="Margin" Value="3px"/>
+        </Style>
+        
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>
