@@ -24,7 +24,7 @@
             </Viewbox>
 
             <Image Grid.Row="1"
-               Source="/TravelAgency;component/Resources/logo_full_color.png"
+               Source="/TravelAgency;component/Resources/dummy_picture.png"
                Margin="5px"/>
             <Viewbox Grid.Row="2"
                  VerticalAlignment="Center">

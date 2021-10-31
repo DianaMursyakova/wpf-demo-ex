@@ -63,6 +63,16 @@ namespace TravelAgency.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dummy_picture {
+            get {
+                object obj = ResourceManager.GetObject("dummy_picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_full_color {
             get {
                 object obj = ResourceManager.GetObject("logo_full_color", resourceCulture);
