@@ -35,7 +35,7 @@ namespace TravelAgency
         }
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new HotelDeletionPage();
+            Page page = new HotelDeletionPage((sender as Button).DataContext as Hotel);
             PageRouter.Instance.ChangePage(page);
         }
 

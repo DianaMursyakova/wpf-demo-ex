@@ -44,7 +44,7 @@ namespace TravelAgency
 
             if(errors.Length != 0)
             {
-                MessageBox.Show(errors.ToString());
+                MessageBox.Show(errors.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 

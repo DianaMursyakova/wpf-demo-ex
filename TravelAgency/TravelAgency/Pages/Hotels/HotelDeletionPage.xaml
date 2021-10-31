@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelAgency"
         mc:Ignorable="d"
-        Title="Удаление отеля" Height="250" Width="483">
+        Title="Удаление отеля" Height="Auto" Width="Auto">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -18,19 +18,19 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="17*"/>
-                <RowDefinition Height="12*"/>
+                <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
             <StackPanel VerticalAlignment="Center">
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <TextBlock Text="Введите названия отеля:" />
-                    <TextBox x:Name="TextBox_hotelTitle"/>
+                    <TextBox x:Name="TBName"/>
                 </StackPanel>
             </StackPanel>
             <Grid Grid.Row="1" Style="{StaticResource BlueBackground}">
                 <Button x:Name="BtnDelete" Grid.Row="1" 
                         Content="Удалить" 
                         Style="{StaticResource RedButton}"
-                    Foreground="White" FontWeight="Bold" Click="BtnDelete_Click"/>
+                    Foreground="White" FontWeight="Bold" Click="BtnDelete_Click" Height="Auto" VerticalAlignment="Stretch"/>
             </Grid>
         </Grid>
     </Grid>
