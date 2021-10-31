@@ -90,9 +90,6 @@
       <DependentUpon>HotelsTablePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageRouter.cs" />
-    <Compile Include="Pages\Tours\TourItem.xaml.cs">
-      <DependentUpon>TourItem.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Tours\TourListPage.xaml.cs">
       <DependentUpon>TourListPage.xaml</DependentUpon>
     </Compile>
@@ -141,10 +138,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Tours\TourItem.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Tours\TourListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

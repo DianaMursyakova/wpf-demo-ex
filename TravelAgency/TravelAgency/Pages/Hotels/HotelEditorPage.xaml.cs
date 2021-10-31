@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace TravelAgency
 {
@@ -42,7 +34,7 @@ namespace TravelAgency
             if (_currentHotel.Country == null)
                 errors.AppendLine("Укажите страну");
 
-            if(errors.Length != 0)
+            if (errors.Length != 0)
             {
                 MessageBox.Show(errors.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -57,11 +49,11 @@ namespace TravelAgency
                 MessageBox.Show($"Информация сохранена");
                 PageRouter.Instance.GoBack();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Произошла ошибка во время сохранения:\n{ex.Message}");
             }
-            
+
         }
     }
 }

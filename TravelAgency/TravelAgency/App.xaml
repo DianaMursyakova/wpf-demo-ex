@@ -60,8 +60,7 @@
             <Setter Property="BorderBrush" Value=" #000000"/>
         </Style>
 
-        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}" x:Key="CommonTextBlock">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}">
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
 

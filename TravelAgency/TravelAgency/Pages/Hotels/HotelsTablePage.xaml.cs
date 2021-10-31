@@ -1,38 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TravelAgency
 {
-    /// <summary>
-    /// Логика взаимодействия для HotelsTable.xaml
-    /// </summary>
     public partial class HotelsTable : Page
     {
+
+        private readonly ObservableCollection<int> _elementsCounts = new ObservableCollection<int>()
+        {
+            10,20,30,40,50
+        };
+
         public HotelsTable()
         {
             InitializeComponent();
 
 
+            CBoxHotelCount.ItemsSource = _elementsCounts;
+            CBoxHotelCount.SelectedIndex = 0;
 
+            UpdateHotels();
         }
         private void UpdateHotels()
         {
             RussiaTravelEntities.Context.ChangeTracker.Entries().ToList().ForEach(hotel => hotel.Reload());
-            DGridHotels.ItemsSource = RussiaTravelEntities.Context.Hotel.ToList();
+
+            var currentTours = RussiaTravelEntities.Context.Tour.ToList();
+
+
+            DGridHotels.ItemsSource = currentTours;
         }
+
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             Page page = new HotelDeletionPage((sender as Button).DataContext as Hotel);

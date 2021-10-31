@@ -67,7 +67,7 @@
         </Grid>-->
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
             <WrapPanel.Resources>
-                <Style TargetType="TextBlock" BasedOn="{StaticResource CommonTextBlock}">
+                <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}">
                     <Setter Property="Width" Value="200"/>
                 </Style>
             </WrapPanel.Resources>
@@ -88,6 +88,7 @@
                     
                 </ComboBox>
             </StackPanel>
+            
             <CheckBox x:Name="ChBoxActual" 
                       Content="Показывать только актуальные туры"
                       Checked="ChBoxActual_Checked"
