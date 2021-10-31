@@ -56,31 +56,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Pages\HotelDeletionPage.xaml.cs">
+    <Compile Include="Pages\Hotels\HotelDeletionPage.xaml.cs">
       <DependentUpon>HotelDeletionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\HotelEditorPage.xaml.cs">
+    <Compile Include="Pages\Hotels\HotelEditorPage.xaml.cs">
       <DependentUpon>HotelEditorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HotelsTablePage.xaml.cs">
+    <Compile Include="Pages\Hotels\HotelsTablePage.xaml.cs">
       <DependentUpon>HotelsTablePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageRouter.cs" />
-    <Compile Include="TourItem.xaml.cs">
+    <Compile Include="Pages\Tours\TourItem.xaml.cs">
       <DependentUpon>TourItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TourListPage.xaml.cs">
+    <Compile Include="Pages\Tours\TourListPage.xaml.cs">
       <DependentUpon>TourListPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\HotelDeletionPage.xaml">
+    <Page Include="Pages\Hotels\HotelDeletionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\HotelEditorPage.xaml">
+    <Page Include="Pages\Hotels\HotelEditorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HotelsTablePage.xaml">
+    <Page Include="Pages\Hotels\HotelsTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,11 +96,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TourItem.xaml">
+    <Page Include="Pages\Tours\TourItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TourListPage.xaml">
+    <Page Include="Pages\Tours\TourListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
