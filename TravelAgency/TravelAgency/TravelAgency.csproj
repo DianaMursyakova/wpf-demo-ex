@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +15,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,9 +38,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,6 +68,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Country.cs">
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel.cs">
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelComment.cs">
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelImage.cs">
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Hotels\HotelDeletionPage.xaml.cs">
       <DependentUpon>HotelDeletionPage.xaml</DependentUpon>
     </Compile>
@@ -71,6 +95,27 @@
     </Compile>
     <Compile Include="Pages\Tours\TourListPage.xaml.cs">
       <DependentUpon>TourListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RussiaTravelModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RussiaTravelModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RussiaTravelModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RussiaTravelModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RussiaTravelModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Tour.cs">
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type.cs">
+      <DependentUpon>RussiaTravelModel.tt</DependentUpon>
     </Compile>
     <Page Include="Pages\Hotels\HotelDeletionPage.xaml">
       <SubType>Designer</SubType>
@@ -123,9 +168,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="RussiaTravelModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RussiaTravelModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RussiaTravelModel.edmx.diagram">
+      <DependentUpon>RussiaTravelModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -137,5 +190,28 @@
   <ItemGroup>
     <Resource Include="Resources\dummy_picture.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="RussiaTravelModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RussiaTravelModel.Context.cs</LastGenOutput>
+      <DependentUpon>RussiaTravelModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="RussiaTravelModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RussiaTravelModel.edmx</DependentUpon>
+      <LastGenOutput>RussiaTravelModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
