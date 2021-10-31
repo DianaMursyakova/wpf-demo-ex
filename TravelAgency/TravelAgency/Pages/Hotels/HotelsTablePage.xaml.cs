@@ -27,10 +27,7 @@ namespace TravelAgency
         {
             RussiaTravelEntities.Context.ChangeTracker.Entries().ToList().ForEach(hotel => hotel.Reload());
 
-            var currentTours = RussiaTravelEntities.Context.Tour.ToList();
-
-
-            DGridHotels.ItemsSource = currentTours;
+            DGridHotels.ItemsSource = RussiaTravelEntities.Context.Hotel.ToList();
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)

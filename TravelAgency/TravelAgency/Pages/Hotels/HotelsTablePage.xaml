@@ -67,8 +67,8 @@
             </StackPanel>
             <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right">
 
-                <Button x:Name="BtnPrev" Content="Предыдущая" Click="BtnPrev_Click"/>
-                <Button x:Name="BtnNext" Content="Следующая" Click="BtnNext_Click"/>
+                <Button x:Name="BtnPrev" Content="Предыдущая"/>
+                <Button x:Name="BtnNext" Content="Следующая"/>
                 <Button x:Name="BtnFirst" Content="Первая"/>
                 <Button x:Name="BtnLast" Content="Последняя"/>
 

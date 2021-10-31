@@ -9,7 +9,6 @@ namespace TravelAgency
         private Frame _mainFrame;
         private Page _currentPage;
         private Page _prevPage;
-        private Stack<Page> pages = new Stack<Page>();
 
         public static PageRouter Instance
         {
