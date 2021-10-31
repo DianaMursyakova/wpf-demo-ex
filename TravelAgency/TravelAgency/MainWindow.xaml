@@ -8,15 +8,16 @@
         Title="Путешествуй по России" Height="450" Width="800" Icon="Resources/logo_full_color.png" MinWidth="700" MinHeight="400">
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="35"/>
+            <RowDefinition Height="45"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" 
               Focusable="False"
-              Style="{StaticResource CyanBackground}">
+              Style="{StaticResource BlueBackground}">
             <Grid.Resources>
                 <Style TargetType="Button" BasedOn="{StaticResource MenuButton}">
-                    
+                    <Setter Property="Height" Value="Auto"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch"/>
                 </Style>
             </Grid.Resources>
             <Grid.ColumnDefinitions>

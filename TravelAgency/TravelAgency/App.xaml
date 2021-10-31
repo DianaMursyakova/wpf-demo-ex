@@ -17,18 +17,21 @@
             <Setter Property="MinWidth" Value="200"/>
         </Style>
 
-        <Style x:Key="CyanBackground" TargetType="Grid">
-            <Setter Property="Background" Value="#bae3e8"/>
+        <Style x:Key="CommonBackgroundStyle" TargetType="FrameworkElement">
+            <Setter Property="Control.Background" Value="#bae3e8"/>
         </Style>
 
-        <Style x:Key="BlueBackground" TargetType="Grid">
-            <Setter Property="Background" Value="#445c93"/>
+        <Style x:Key="BlueBackground" TargetType="FrameworkElement"  BasedOn="{StaticResource CommonBackgroundStyle}">
+            <Setter Property="Control.Background" Value="#445c93"/>
         </Style>
 
-        <Style x:Key="GoldBackground" TargetType="Grid">
-            <Setter Property="Background" Value="#fac716"/>
+        <Style x:Key="GoldBackground" TargetType="FrameworkElement"  BasedOn="{StaticResource CommonBackgroundStyle}">
+            <Setter Property="Control.Background" Value="#fac716"/>
         </Style>
-
+        <Style TargetType="WrapPanel" BasedOn="{StaticResource CommonBackgroundStyle}">
+            
+        </Style>
+        
         <Style TargetType="Label" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Foreground" Value="#000000"/>
         </Style>
@@ -61,9 +64,9 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
-        
+
         <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
-            <Setter Property="Width" Value="200px"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
         </Style>
 
         <Style TargetType="ComboBox" BasedOn="{StaticResource CommonStyle}">

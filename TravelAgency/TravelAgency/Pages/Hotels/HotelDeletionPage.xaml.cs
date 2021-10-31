@@ -24,11 +24,13 @@ namespace TravelAgency
             InitializeComponent();
         }
 
-        private void Button_Delete_Click(object sender, RoutedEventArgs e)
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder stringBuilder = new StringBuilder();
+            
             if (TextBox_hotelTitle.Text.Length == 0 || TextBox_hotelTitle.Text == "")
             {
-                Label_Error.Visibility = Visibility.Visible;
+                stringBuilder.Append("Введите название отеля");
                 return;
             }
 

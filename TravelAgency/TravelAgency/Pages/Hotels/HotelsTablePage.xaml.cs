@@ -21,45 +21,47 @@ namespace TravelAgency
     /// </summary>
     public partial class HotelsTable : Page
     {
-        private class Hotel
-        {
-            public string Title { get; set; }
-            public string Stars { get; set; }
-            public string Country { get; set; }
-            public string ToursCount { get; set; }
-        }
-        private ObservableCollection<Hotel> _hotels = new ObservableCollection<Hotel>();
-
         public HotelsTable()
         {
             InitializeComponent();
-            HotelsDataGrid.AutoGenerateColumns = false;
-            HotelsDataGrid.ItemsSource = _hotels;
 
 
-            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
-            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
-            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
-            _hotels.Add(new Hotel() { Title = "Гостиница Татарстан", Stars = "4", Country = "Россия", ToursCount = "10" });
 
-            ComboBox_ElementsShowCount.SelectedIndex = 0;
         }
-
-        private void Button_Delete_Click(object sender, RoutedEventArgs e)
+        private void UpdateHotels()
+        {
+            RussiaTravelEntities.Context.ChangeTracker.Entries().ToList().ForEach(hotel => hotel.Reload());
+            DGridHotels.ItemsSource = RussiaTravelEntities.Context.Hotel.ToList();
+        }
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             Page page = new HotelDeletionPage();
             PageRouter.Instance.ChangePage(page);
         }
 
-        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            PageRouter.Instance.ChangePage(new HotelEditorPage());
+            Page page = new HotelEditorPage(null);
+            PageRouter.Instance.ChangePage(page);
         }
 
-        private void Button_Edit_Click(object sender, RoutedEventArgs e)
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new HotelEditorPage();
+            Page page = new HotelEditorPage((sender as Button).DataContext as Hotel);
             PageRouter.Instance.ChangePage(page);
+        }
+
+        private void CBoxHotelCount_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                UpdateHotels();
+            }
         }
     }
 }

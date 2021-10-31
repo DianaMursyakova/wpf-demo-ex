@@ -11,11 +11,9 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid Style="{StaticResource CyanBackground}">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Назад" Style="{StaticResource MenuButton}"/>
-                <Label  Content="Подтверждение удаления отеля"/>
-            </StackPanel>
+        <Grid Style="{StaticResource CommonBackgroundStyle}">
+
+            <TextBlock  Text="Подтверждение удаления отеля"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -24,13 +22,16 @@
             </Grid.RowDefinitions>
             <StackPanel VerticalAlignment="Center">
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="Введите названия отеля:" />
+                    <TextBlock Text="Введите названия отеля:" />
                     <TextBox x:Name="TextBox_hotelTitle"/>
                 </StackPanel>
-                <Label x:Name="Label_Error" Content="Введите название отеля" Foreground="#e31e24" Visibility="Hidden"/>
             </StackPanel>
-            <Button x:Name="Button_Delete" Grid.Row="1" Content="Удалить" Style="{StaticResource RedButton}" Width="120" Height="40" HorizontalContentAlignment="Center"
-                    Foreground="White" FontWeight="Bold" Margin="178,16,179,16" Click="Button_Delete_Click"/>
+            <Grid Grid.Row="1" Style="{StaticResource BlueBackground}">
+                <Button x:Name="BtnDelete" Grid.Row="1" 
+                        Content="Удалить" 
+                        Style="{StaticResource RedButton}"
+                    Foreground="White" FontWeight="Bold" Click="BtnDelete_Click"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

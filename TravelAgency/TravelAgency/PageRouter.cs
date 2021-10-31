@@ -37,8 +37,8 @@ namespace TravelAgency
         }
         public void GoBack()
         {
-
-            MainFrame.Navigate(_prevPage);
+            
+            ChangePage(_prevPage);
         }
     }
 }

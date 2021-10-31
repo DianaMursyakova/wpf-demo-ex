@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelAgency"
         mc:Ignorable="d"
-        Title="Добавление/редактирование отеля">
+        Title="Добавление/редактирование отеля" Height="Auto" Width="Auto">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="327*"/>
-            <RowDefinition Height="52*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
+           
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -23,26 +24,29 @@
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="20*"/>
             </Grid.ColumnDefinitions>
-            <Grid.Resources>
-                <Style TargetType="Label" BasedOn="{StaticResource CommonStyle}">
-                    <Setter Property="HorizontalAlignment" Value="Right"/>
-                </Style>
-            </Grid.Resources>
-            <Label Content="Название:" />
-            <Label Content="Количество звезд:" Grid.Row="1" />
-            <Label Content="Описание:" Grid.Row="2" />
-            <Label Content="Страна:" Grid.Row="3" />
+            <TextBlock Text="Название:" />
+            <TextBlock Text="Количество звезд:" Grid.Row="1" />
+            <TextBlock Text="Описание:" Grid.Row="2" />
+            <TextBlock Text="Страна:" Grid.Row="3" />
 
-            <TextBox Grid.Column="1"/>
-            <TextBox Grid.Column="1" Grid.Row="1"/>
-            <TextBox Grid.Column="1" Grid.Row="2" 
+            <TextBox Text="{Binding Name}" Grid.Column="1"/>
+            <TextBox Text="{Binding CountOfStars}" Grid.Column="1" Grid.Row="1"/>
+            <TextBox Text="{Binding Description}" 
+                     Grid.Column="1" Grid.Row="2" 
                      TextWrapping="Wrap"
                      AcceptsReturn="True"
-                     Width="Auto"
+                     Width="Auto" 
+                     Height="Auto" 
+                     VerticalAlignment="Stretch"
                      />
-            <ComboBox Grid.Column="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="Auto" Grid.Row="3"/>
+            <ComboBox x:Name="CBoxCountry" 
+                      SelectedItem="{Binding Country}" 
+                      DisplayMemberPath="Name" 
+                      Grid.Column="1" 
+                      Grid.Row="3" 
+                      HorizontalAlignment="Stretch"/>
         </Grid>
-        <Grid Style="{StaticResource CyanBackground}" Grid.Row="1">
+        <Grid Style="{StaticResource BlueBackground}" Grid.Row="1">
             <Button x:Name="Button_confirm" Content="Подтвердить" Style="{StaticResource RedButton}" Height="50" Click="Button_confirm_Click"/>
         </Grid>
     </Grid>
