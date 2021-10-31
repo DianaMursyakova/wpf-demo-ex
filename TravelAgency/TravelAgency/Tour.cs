@@ -28,6 +28,13 @@ namespace TravelAgency
         public byte[] ImagePreview { get; set; }
         public decimal Price { get; set; }
         public bool IsActual { get; set; }
+        public string ActualText
+        {
+            get
+            {
+                return (IsActual == true) ? "Актуален" : "Завершен"; 
+            }
+        }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hotel> Hotel { get; set; }

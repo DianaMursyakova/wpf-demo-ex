@@ -24,22 +24,8 @@ namespace TravelAgency
         public TourList()
         {
             InitializeComponent();
-            List<TourItem> tourItems = new List<TourItem>()
-        {
-            new TourItem("Воронеж", "20000", false,"47"),
-            new TourItem() ,
-            new TourItem(),
-            new TourItem(),
-            new TourItem("Горячие источники", "50000", true,"30"),
-            new TourItem(),
-            new TourItem(),
-            new TourItem()
-        };
-            foreach (var tour in tourItems)
-            {
-                
-                ToursPanel.Children.Add(tour);
-            }
+            var currentTours = RussiaTravelEntities.Context.Tour.ToList();
+            LViewTours.ItemsSource = currentTours;
         }
     }
 }
