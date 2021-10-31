@@ -47,20 +47,19 @@ namespace TravelAgency
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            var deleteWindow = new HotelDeleteWindow();
-            deleteWindow.Show();
+            Page page = new HotelDeletionPage();
+            PageRouter.Instance.ChangePage(page);
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            var window = new HotelEditor();
-            window.Show();
+            PageRouter.Instance.ChangePage(new HotelEditorPage());
         }
 
         private void Button_Edit_Click(object sender, RoutedEventArgs e)
         {
-            var window = new HotelEditor();
-            window.Show();
+            Page page = new HotelEditorPage();
+            PageRouter.Instance.ChangePage(page);
         }
     }
 }

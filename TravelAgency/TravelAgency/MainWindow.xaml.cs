@@ -20,36 +20,27 @@ namespace TravelAgency
     /// </summary>
     public partial class MainWindow : Window
     {
-        Page currentPage;
-        Page prevPage;
         public MainWindow()
         {
             InitializeComponent();
-            ChangePage(new TourList());
+
+            PageRouter.Instance.MainFrame = MainFrame;
+            PageRouter.Instance.ChangePage(new TourList());
         }
 
-        private void ChangePage(Page page)
-        {
-            if (page == currentPage)
-                return;
-            
-            prevPage = currentPage;
-            currentPage = page;
-            MainFrame.Navigate(currentPage);
-        }
         private void MenuItem_HotelTabel_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage(new HotelsTable());
+            PageRouter.Instance.ChangePage(new HotelsTable());
         }
 
         private void MenuItem_TourList_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage(new TourList());
+            PageRouter.Instance.ChangePage(new TourList());
         }
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage(prevPage);
+            PageRouter.Instance.GoBack();
         }
     }
 }

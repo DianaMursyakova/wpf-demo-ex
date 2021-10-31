@@ -17,9 +17,9 @@ namespace TravelAgency
     /// <summary>
     /// Логика взаимодействия для HotelEditor.xaml
     /// </summary>
-    public partial class HotelEditor : Window
+    public partial class HotelEditorPage : Page
     {
-        public HotelEditor()
+        public HotelEditorPage()
         {
             InitializeComponent();
         }
@@ -27,12 +27,7 @@ namespace TravelAgency
         private void Button_confirm_Click(object sender, RoutedEventArgs e)
         {
 
-            this.Close();
-        }
-
-        private void Button_back_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            PageRouter.Instance.GoBack();
         }
     }
 }

@@ -17,9 +17,9 @@ namespace TravelAgency
     /// <summary>
     /// Логика взаимодействия для HotelDeleteWindow.xaml
     /// </summary>
-    public partial class HotelDeleteWindow : Window
+    public partial class HotelDeletionPage : Page
     {
-        public HotelDeleteWindow()
+        public HotelDeletionPage()
         {
             InitializeComponent();
         }
@@ -31,8 +31,8 @@ namespace TravelAgency
                 Label_Error.Visibility = Visibility.Visible;
                 return;
             }
-                
-            this.Close();
+
+            PageRouter.Instance.GoBack();
         }
     }
 }

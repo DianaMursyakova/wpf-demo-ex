@@ -56,30 +56,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="HotelDeleteWindow.xaml.cs">
-      <DependentUpon>HotelDeleteWindow.xaml</DependentUpon>
+    <Compile Include="Pages\HotelDeletionPage.xaml.cs">
+      <DependentUpon>HotelDeletionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HotelEditor.xaml.cs">
-      <DependentUpon>HotelEditor.xaml</DependentUpon>
+    <Compile Include="Pages\HotelEditorPage.xaml.cs">
+      <DependentUpon>HotelEditorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HotelsTable.xaml.cs">
-      <DependentUpon>HotelsTable.xaml</DependentUpon>
+    <Compile Include="HotelsTablePage.xaml.cs">
+      <DependentUpon>HotelsTablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageRouter.cs" />
     <Compile Include="TourItem.xaml.cs">
       <DependentUpon>TourItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TourList.xaml.cs">
-      <DependentUpon>TourList.xaml</DependentUpon>
+    <Compile Include="TourListPage.xaml.cs">
+      <DependentUpon>TourListPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="HotelDeleteWindow.xaml">
+    <Page Include="Pages\HotelDeletionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HotelEditor.xaml">
+    <Page Include="Pages\HotelEditorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HotelsTable.xaml">
+    <Page Include="HotelsTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,7 +100,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TourList.xaml">
+    <Page Include="TourListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
