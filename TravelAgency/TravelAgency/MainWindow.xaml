@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" 
               Focusable="False"
-              Style="{StaticResource BlueBackground}">
+              Style="{StaticResource CyanBackground}">
             <Grid.Resources>
                 <Style TargetType="Button" BasedOn="{StaticResource MenuButton}">
                     
