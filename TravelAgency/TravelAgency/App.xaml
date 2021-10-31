@@ -4,13 +4,17 @@
              xmlns:local="clr-namespace:TravelAgency"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="CommonStyle" TargetType="Control">
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontFamily" Value="Comic Sans MC"/>
+        <Style x:Key="BaseStyle" TargetType="FrameworkElement">
+            <Setter Property="TextElement.FontSize" Value="14"/>
+            <Setter Property="TextElement.FontFamily" Value="Comic Sans MC"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Height" Value="28"/>
-            <Setter Property="Margin" Value="5px"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Control" BasedOn="{StaticResource BaseStyle}" x:Key="CommonStyle">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="MinWidth" Value="200"/>
         </Style>
 
         <Style x:Key="CyanBackground" TargetType="Grid">
@@ -53,21 +57,21 @@
             <Setter Property="BorderBrush" Value=" #000000"/>
         </Style>
 
-        <Style TargetType="TextBlock" >
+        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
         
         <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
             <Setter Property="Width" Value="200px"/>
-            
         </Style>
 
         <Style TargetType="ComboBox" BasedOn="{StaticResource CommonStyle}">
-            <Setter Property="Width" Value="200px"/>
             <Setter Property="MaxHeight" Value="24"/>
         </Style>
-
+        <Style TargetType="CheckBox" BasedOn="{StaticResource CommonStyle}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
         <Style TargetType="Grid">
             <Setter Property="Background" Value="White"/>
         </Style>

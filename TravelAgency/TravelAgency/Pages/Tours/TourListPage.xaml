@@ -10,10 +10,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="67*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Style="{StaticResource CyanBackground}">
+        <!--<Grid Grid.Row="0" Style="{StaticResource CyanBackground}">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -64,8 +64,23 @@
                     <TextBlock Text="По убыванию"/>
                 </ComboBoxItem>
             </ComboBox>
-        </Grid>
-
+        </Grid>-->
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите название для поиска:" 
+                           TextAlignment="Right"/>
+                <TextBox x:Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите название для поиска:" 
+                           TextAlignment="Right"/>
+                <ComboBox x:Name="CBoxType" SelectionChanged="CBoxType_SelectionChanged" DisplayMemberPath="Name"/>
+            </StackPanel>
+            <CheckBox x:Name="ChBoxActual" 
+                      Content="Показывать только актуальные туры"
+                      Checked="ChBoxActual_Checked"
+                      Unchecked="ChBoxActual_Checked"></CheckBox>
+        </WrapPanel>
         <ListView x:Name="LViewTours" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
