@@ -66,6 +66,11 @@
             </ComboBox>
         </Grid>-->
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+            <WrapPanel.Resources>
+                <Style TargetType="TextBlock" BasedOn="{StaticResource CommonTextBlock}">
+                    <Setter Property="Width" Value="200"/>
+                </Style>
+            </WrapPanel.Resources>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска:" 
                            TextAlignment="Right"/>
@@ -76,20 +81,28 @@
                            TextAlignment="Right"/>
                 <ComboBox x:Name="CBoxType" SelectionChanged="CBoxType_SelectionChanged" DisplayMemberPath="Name"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Сортировка по стоимости:" 
+                           TextAlignment="Right"/>
+                <ComboBox x:Name="CBoxPriceSort" SelectionChanged="CBoxPriceSort_SelectionChanged">
+                    
+                </ComboBox>
+            </StackPanel>
             <CheckBox x:Name="ChBoxActual" 
                       Content="Показывать только актуальные туры"
                       Checked="ChBoxActual_Checked"
                       Unchecked="ChBoxActual_Checked"></CheckBox>
+            
         </WrapPanel>
-        <ListView x:Name="LViewTours" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+        <ListView Background="{x:Null}" x:Name="LViewTours" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                    <WrapPanel Background="{x:Null}" Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Background="{x:Null}" Margin="10" VerticalAlignment="Stretch">
+                    <Grid Margin="10" VerticalAlignment="Stretch">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
                             <RowDefinition Height="4*"/>
@@ -100,7 +113,9 @@
                         <TextBlock x:Name="TitleLabel" 
                                    Grid.Row="0"
                                    Text="{Binding Name}"
-                                   HorizontalAlignment="Center"/>
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"
+                                   FontSize="20"/>
 
                         <Image Grid.Row="1" Width="400" Stretch="UniformToFill">
                             <Image.Source>
@@ -113,7 +128,9 @@
                         </Image>
                         <TextBlock Grid.Row="2" x:Name="PriceLabel" 
                                    Text="{Binding Price, StringFormat={}{0:N2} РУБ}"
-                                   FontWeight="Bold" />
+                                   FontWeight="Bold" 
+                                   HorizontalAlignment="Center"
+                                   FontSize="18"/>
 
                         <Grid Grid.Row="3" Background="{x:Null}">
                             <Grid.ColumnDefinitions>
@@ -125,12 +142,14 @@
                                        x:Name="RelevanceLabel" 
                                        Text="{Binding ActualText}" 
                                        Foreground="Lime"
-                                       HorizontalAlignment="Left"/>
+                                       HorizontalAlignment="Left"
+                                       FontSize="16"/>
 
                             <TextBlock Grid.Column="1" 
                                        x:Name="TicketCountLabel" 
                                        HorizontalAlignment="Right"
-                                       Text="{Binding TicketCount, StringFormat={}Билетов осталось: {0}}"/>
+                                       Text="{Binding TicketCount, StringFormat={}Билетов осталось: {0}}"
+                                       FontSize="16"/>
 
 
                         </Grid>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,11 @@ namespace TravelAgency
     /// </summary>
     public partial class TourList : Page
     {
+        ObservableCollection<string> PriceSort = new ObservableCollection<string>()
+        {
+            "По возрастанию",
+            "По убыванию"
+        };
 
         public TourList()
         {
@@ -31,6 +37,9 @@ namespace TravelAgency
             CBoxType.SelectedIndex = 0;
 
             ChBoxActual.IsChecked = true;
+
+            CBoxPriceSort.ItemsSource = PriceSort;
+            CBoxPriceSort.SelectedIndex = 0;
 
             UpdateTours();
         }
@@ -51,7 +60,7 @@ namespace TravelAgency
                 currentTours = currentTours.Where(tour => tour.IsActual == true).ToList();
             }
 
-            LViewTours.ItemsSource = currentTours.OrderBy(tour => tour.TicketCount).ToList();
+            LViewTours.ItemsSource = currentTours.OrderByDescending(tour => tour.TicketCount).ToList();
         }
 
         private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
@@ -65,6 +74,11 @@ namespace TravelAgency
         }
 
         private void ChBoxActual_Checked(object sender, RoutedEventArgs e)
+        {
+            UpdateTours();
+        }
+
+        private void CBoxPriceSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UpdateTours();
         }
